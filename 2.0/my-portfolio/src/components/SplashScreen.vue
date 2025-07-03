@@ -93,11 +93,19 @@ clearTimeout(this.timer)
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.8s;
+  /* transition: opacity 0.8s; */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @keyframes zoom-in {
