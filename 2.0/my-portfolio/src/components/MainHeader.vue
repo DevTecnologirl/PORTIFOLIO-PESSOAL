@@ -83,6 +83,9 @@ function goTo(section) {
 function toggleDarkMode() {
   $q.dark.set(!$q.dark.isActive)
 }
+function openCV() {
+  window.open( '/cvcamilly.pdf', '_blank')
+}
 </script>
 
 <template>
@@ -96,12 +99,29 @@ function toggleDarkMode() {
         <li><a href="#" @click.prevent="goTo('contact')">Contato</a></li>
       </ul>
     </nav>
-
-    <q-btn dense flat round icon="dark_mode" @click="toggleDarkMode" color="white" class="theme-toggle q-gutter-md " />
+    <q-btn dense flat round color="white" class="button-cv " icon="description" @click="openCV"/>
+    <q-btn dense flat round icon="dark_mode" @click="toggleDarkMode" color="white" class="theme-toggle" />
   </header>
 </template>
 
 <style scoped>
+.button-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6331CF;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 49, 207, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(99, 49, 207, 0.023);
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -180,7 +200,20 @@ nav li a:hover::after {
   
 }
 
+
 .theme-toggle {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6331CF;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(99, 49, 207, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 49, 207, 0.4);
 }
 </style>

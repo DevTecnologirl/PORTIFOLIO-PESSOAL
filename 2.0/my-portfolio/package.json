@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fluentui/svg-icons": "^1.1.305",
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.8.3",
     "pinia": "^3.0.3",

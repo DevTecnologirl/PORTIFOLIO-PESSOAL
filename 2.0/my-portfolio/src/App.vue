@@ -4,9 +4,15 @@
     <SplashScreen v-if="splashStore.showSplash" />
       <q-page-container v-else>
       <MainHeader />
+      <SocialSide />
        <transition name="fade" mode="out-in">
         <component :is="currentComponent" :key="navStore.currentSection" />
       </transition>
+      <q-footer class="text-center">
+        <div class="text-white">
+          &copy; 2025 My Portfolio. @Tecnologirl ♥
+        </div>
+      </q-footer>
     </q-page-container>
   </q-layout>
 </template>
@@ -18,6 +24,7 @@ import MyAbout from './components/MyAbout.vue'
 import MyProjects from './components/MyProjects.vue'
 import MyContact from './components/MyContact.vue'
 import SplashScreen from './components/SplashScreen.vue'
+import SocialSide from './components/SocialSide.vue'
 
 import { useSplashStore } from '@/stores/splash'
 import { useNavigationStore } from '@/stores/navigation'
