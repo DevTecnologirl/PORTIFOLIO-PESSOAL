@@ -35,15 +35,15 @@ function scrollTo(sectionId) {
     <nav class="q-gutter-md nav-links">
   <ul>
     <li><a href="#" @click="scrollTo('about')"><span class="nav-index">01.</span> Sobre</a></li>
-    <li><a href="#" @click="scrollTo('projects')"><span class="nav-index">02.</span> Projetos</a></li>
-    <li><a href="#" @click="scrollTo('experience')"><span class="nav-index">03.</span> Experiência</a></li>
-    <li><a href="#" @click="scrollTo('study')"><span class="nav-index">04.</span> Formação</a></li>
+    <li><a href="#" @click="scrollTo('experience')"><span class="nav-index">02.</span> Experiência</a></li>
+    <li><a href="#" @click="scrollTo('study')"><span class="nav-index">03.</span> Formação</a></li>
+    <li><a href="#" @click="scrollTo('projects')"><span class="nav-index">04.</span> Projetos</a></li>
     <li><a href="#" @click="scrollTo('contact')"><span class="nav-index">05.</span> Contato</a></li>
   </ul>
 </nav>
 <div class="button-container">
   <q-btn dense flat round color="white" class="button-cv " icon="description" @click="openCV"/>
-  <q-btn dense flat round icon="dark_mode" @click="toggleDarkMode" color="white" class="theme-toggle" />
+  <!-- <q-btn dense flat round icon="dark_mode" @click="toggleDarkMode" color="white" class="theme-toggle" /> -->
 </div>
   </header>
 </template>

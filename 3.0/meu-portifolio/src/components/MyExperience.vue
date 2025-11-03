@@ -2,7 +2,7 @@
   <section id="experience" class="experience-section">
     <h2>
       <span class="section-index">02.</span>
-      Where I’ve Worked
+      Experiência
       <span class="section-line"></span>
     </h2>
 
@@ -23,7 +23,7 @@
       <div class="job-details">
         <h3>
           {{ jobs[activeIndex].title }}
-          <span class="at">@ {{ jobs[activeIndex].company }}</span>
+          <!-- <span class="at">@{{ jobs[activeIndex].company }}</span> -->
         </h3>
         <p class="date">{{ jobs[activeIndex].date }}</p>
         <ul class="description">
@@ -48,45 +48,49 @@ interface Job {
 
 const jobs = ref<Job[]>([
   {
-    company: 'Upstatement',
-    title: 'Lead Engineer',
-    date: 'May 2018 – Present',
+    company: 'Bolsista',
+    title: 'Laboratório Maker - IFF',
+    date: 'Set 2021 – 2023',
     points: [
-      'Deliver high-quality, robust production code for a diverse array of projects.',
-      'Work alongside creative directors to lead the research and development of technical solutions.',
-      'Collaborate with designers and project managers to transform creative concepts.',
-      'Provide leadership within engineering department through mentorship.'
+      'Realizado durante meu ensino médio integrado a informática',
+ 'Desenvolvimento de projetos de modelagem impressões 3D, manipular scanner 3D e cortes na CNC laser',
+ 'para projetos internos e externos no IFF.',
+      'Participação em eventos e workshops de tecnologia'
     ]
   },
   {
-    company: 'Apple',
-    title: 'Senior Developer',
-    date: 'Jan 2016 – Apr 2018',
+    company: 'Instrutora',
+    title: 'Ctrl+Play - Instrutora de programação e robótica',
+    date: 'Mar 2023 – Abr 2024',
     points: [
-      'Developed iOS applications used by millions of users worldwide.',
-      'Worked closely with design and QA teams to ensure high standards.',
-      'Contributed to performance optimizations and accessibility improvements.'
+      'Peparar e ministrar aulas de programação: Godot, Roblox, Unity, , Scratch, Kodu.',
+      'Ensinar conceitos de lógica de programação e desenvolvimento de jogos.',
+      'Desenvolvimento de projetos educacionais e atividades práticas.',
+      'Ensino de desenvolvimento web: ( Html5, CSS, Bootstrap, jQuery, PHP, Mysql, VScode, regexp)..',
+      'Criação de ambientes de aprendizagem interativos e envolventes.',
     ]
   },
   {
-    company: 'Scout Studio',
-    title: 'Software Engineer',
-    date: 'Jun 2014 – Dec 2015',
+    company: 'Analista de Sistemas',
+    title: 'Minsait - Analista de Sistemas',
+    date: 'Set 2023 – Mai 2024',
     points: [
-      'Built web applications and prototypes for clients.',
-      'Integrated REST APIs and designed reusable components.',
-      'Led internal tooling development initiatives.'
+      ' Suporte a impressoras. Atendimento à aplicações e ferramentas dentro do serviço.',
+      ' Suporte remoto, atendimento via software de telefonia.',
+      'Registro de chamado via ferramenta ITSM',
+      'Manter documentada todas as atividades até o encerramento do chamado',
     ]
   },
   {
-    company: 'Starry',
-    title: 'Frontend Developer',
-    date: 'Jan 2013 – May 2014',
+    company: 'Desenvolvedora',
+    title: 'Desenvolvedora Junior',
+    date: 'Mai 2024 – atual',
     points: [
-      'Implemented responsive user interfaces with Vue.js and React.',
-      'Worked in agile teams to deliver features on tight deadlines.'
-    ]
-  }
+      'Trabalhando com desenvolvimento de sistemas para serviços ligados aos contratos da empresa.',
+      'Desenvolvimento de sistemas web e Automação utilizando tecnologias como Vue.js, Nuxt.js, YAML, C#, Node.js e Python.',
+      'Implementação de APIs RESTful e integração com bancos de dados relacionais e não relacionais.',
+      'Colaboração com equipes de design para criar interfaces de usuário responsivas e intuitivas.',
+      'Análise e resolução de problemas técnicos em sistemas existentes.',]  }
 ])
 
 const activeIndex = ref(0)
@@ -97,7 +101,7 @@ const activeIndex = ref(0)
   max-width: 900px;
   margin: 0 auto;
   padding: 3rem 1rem;
-  color: #cbd5e1;
+  color: #baff75;
 }
 
 h2 {
@@ -106,18 +110,21 @@ h2 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  color: #f7f6f6;
 }
 
 .section-index {
   color: #baff75;
+  font-family: monospace;
   font-weight: 700;
   margin-right: 0.5rem;
+  font-size: 1.6rem;
 }
 
 .section-line {
   flex-grow: 1;
   height: 1px;
-  background: #334155;
+  background: #9bfa01c9;
   margin-left: 1rem;
 }
 
@@ -129,7 +136,7 @@ h2 {
 
 .company-list {
   min-width: 150px;
-  border-left: 2px solid #334155;
+  border-left: 2px solid #3a0185d7;
 }
 
 .company-list ul {
@@ -141,7 +148,7 @@ h2 {
 .company-list li {
   padding: 0.75rem 1rem;
   cursor: pointer;
-  color: #94a3b8;
+  color: #c4a7fe;
   transition: background 0.3s, color 0.3s;
   border-left: 2px solid transparent;
 }
@@ -172,7 +179,7 @@ h2 {
 
 .job-details .date {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #c4a7fe;
   margin: 0.5rem 0 1rem;
 }
 
@@ -186,6 +193,8 @@ h2 {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.8rem;
+  color: #f7f6f6;
+  font-family: 'Inter', sans-serif;
 }
 
 .description li::before {

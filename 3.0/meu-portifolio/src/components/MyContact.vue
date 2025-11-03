@@ -1,18 +1,23 @@
 <template>
   <section class="contact-section">
-    <h5 class="section-index">04. What’s Next?</h5>
-    <h2 class="contact-title">Get In Touch</h2>
+    <h5 class="section-index"><span class="numero">05.</span> What’s Next?</h5>
+    <h2 class="contact-title">Entre em contato</h2>
     <p class="contact-text">
-      Although I’m not currently looking for any new opportunities, my inbox is always open.
-      Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+      Embora eu não esteja procurando novas oportunidades no momento, minha caixa de entrada está sempre aberta. 
+      Se você tem uma pergunta ou apenas quer dizer oi, farei o possível para entrar em contato com você!
     </p>
-    <a href="mailto:seuemail@exemplo.com" class="contact-button">
-      Say Hello
+    <a href="mailto:tecnologirlinformatica@gmail.com" class="contact-button">
+      Dizer Olá
     </a>
   </section>
 </template>
 
 <style scoped>
+.numero {
+  color: #baff75;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
 .contact-section {
   max-width: 600px;
   margin: 0 auto;
@@ -22,11 +27,11 @@
 }
 
 .section-index {
-  color: #3affd0;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-family: monospace;
-  font-size: 0.95rem;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .contact-title {
@@ -45,9 +50,9 @@
 
 .contact-button {
   display: inline-block;
-  border: 1px solid #3affd0;
+  border: 1px solid #baff75;
   padding: 0.75rem 2rem;
-  color: #3affd0;
+  color: #baff75;
   border-radius: 6px;
   font-family: monospace;
   font-size: 1rem;
@@ -56,7 +61,7 @@
 }
 
 .contact-button:hover {
-  background-color: #3affd0;
+  background-color: #baff75;
   color: #0f172a;
 }
 </style>

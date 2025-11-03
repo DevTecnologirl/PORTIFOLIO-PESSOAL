@@ -1,7 +1,7 @@
 <template>
   <section class="projects-section">
-    <h2 class="section-title">Other Noteworthy Projects</h2>
-    <p class="section-subtitle">view the archive</p>
+    <h2 class="section-title"><span class="numero">04.</span>  Outros projetos notáveis</h2>
+    <p class="section-subtitle">ver o arquivo</p>
 
     <div class="grid-container">
       <div v-for="project in projects" :key="project.title" class="card">
@@ -78,6 +78,11 @@ const projects: Project[] = [
 </script>
 
 <style scoped>
+.numero {
+  color: #baff75;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
 .projects-section {
   max-width: 1100px;
   margin: 0 auto;
@@ -87,14 +92,15 @@ const projects: Project[] = [
 
 .section-title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
 .section-subtitle {
   text-align: center;
-  color: #3affd0;
+  color: #baff75;
   margin-bottom: 2rem;
   font-size: 1rem;
   cursor: pointer;
@@ -130,18 +136,18 @@ const projects: Project[] = [
 
 .icon-folder {
   font-size: 1.5rem;
-  color: #3affd0;
+  color: #baff75;
 }
 
 .card-icons a {
   margin-left: 0.75rem;
-  color: #94a3b8;
+  color: #7e9567;
   font-size: 1.2rem;
   transition: color 0.2s;
 }
 
 .card-icons a:hover {
-  color: #3affd0;
+  color: #9509eb;
 }
 
 .project-title {
@@ -153,7 +159,7 @@ const projects: Project[] = [
 
 .project-description {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: #baff75;
   margin-bottom: 1rem;
 }
 
@@ -162,6 +168,6 @@ const projects: Project[] = [
   flex-wrap: wrap;
   gap: 0.5rem;
   font-size: 0.8rem;
-  color: #64748b;
+  color: #c4a7fe;
 }
 </style>

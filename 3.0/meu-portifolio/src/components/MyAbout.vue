@@ -7,21 +7,23 @@
           <h2 class="titulo">Sobre Mim</h2>
         </div>
         <p>
-          Olá! Meu nome é Camilly e sou desenvolvedora front-end apaixonada por criar interfaces bonitas e funcionais. Minha jornada no desenvolvimento começou explorando maneiras de transformar ideias em experiências digitais intuitivas.
+          Olá! Meu nome é <strong>Camilly Duarte</strong> e sou <strong>Desenvolvedora Fullstack</strong> apaixonada por criar soluções digitais modernas e funcionais.
+          Minha jornada no desenvolvimento começou no ensino médio técnico pelo IFF onde tive oportunidade também em ser bolsista de um laboratório Maker.
         </p>
         <p>
-          Atualmente, tenho focado em construir produtos acessíveis e centrados no usuário. Acredito que o design e o código caminham juntos para criar impacto positivo e experiências memoráveis.
+          Trabalho na criação de aplicações completas, unindo design intuitivo com código escalável e de alta performance.
+          Acredito que a combinação entre back-end sólido e front-end envolvente é o caminho para produtos de sucesso.
         </p>
         <p>
           Aqui estão algumas tecnologias que tenho utilizado recentemente:
         </p>
         <ul class="tecnologias">
-          <li>JavaScript (ES6+)</li>
+          <li>Nuxt</li>
           <li>Vue.js</li>
-          <li>React</li>
-          <li>Node.js</li>
+          <li>Next.js</li>
+          <li>Docker</li>
           <li>TypeScript</li>
-          <li>WordPress</li>
+          <li>Python</li>
         </ul>
       </div>
       <div class="foto">
@@ -34,6 +36,8 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700&display=swap');
+
 .sobre-container {
   padding: 6rem 1rem;
   display: flex;
@@ -64,14 +68,17 @@
 
 .numero {
   color: #baff75;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .titulo {
   color: #f7f6f6;
   font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .texto p {
@@ -79,6 +86,7 @@
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .tecnologias {
@@ -92,7 +100,7 @@
 
 .tecnologias li {
   color: #f7f6f6;
-  font-family: monospace;
+  font-family: 'Fira Code', monospace;
   font-size: 1rem;
   position: relative;
   padding-left: 1.2rem;
@@ -113,6 +121,7 @@
 
 .foto-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .foto-wrapper::before {
@@ -125,6 +134,18 @@
   border: 2px solid #baff75;
   border-radius: 4px;
   z-index: -1;
+  transition: top 0.4s ease, left 0.4s ease;
+}
+
+.foto-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(186, 255, 117, 0.4);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -2;
 }
 
 .foto img {
@@ -132,5 +153,20 @@
   height: auto;
   border-radius: 4px;
   display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.foto-wrapper:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.foto-wrapper:hover::before {
+  top: 10px;
+  left: 10px;
+}
+
+.foto-wrapper:hover::after {
+  opacity: 1;
 }
 </style>
