@@ -52,7 +52,7 @@ const cursos = ref([
     descricao:
       "Formação técnica voltada para desenvolvimento de sistemas, redes e manutenção de computadores.",
     habilidades: ["HTML", "CSS", "JavaScript", "Redes", "Hardware", "Manutenção de Computadores", "Banco de Dados", "Lógica de Programação", " Sistemas Embarcados"],
-    imagem: "src/assets/tec3.png",
+    imagem: "@/assets/tec3.png",
     linkCertificado: "#",
     linkInstituicao: "https://www.iff.edu.br",
   },
@@ -63,7 +63,7 @@ const cursos = ref([
     descricao:
       "Graduação com foco em engenharia de software, banco de dados, programação e gestão de tecnologia.",
     habilidades: ["Java", "Python", "Banco de Dados", "Engenharia de Software", "Estrutura de Dados", "Algoritmos", "Desenvolvimento Web", "Redes de Computadores"],
-    imagem: "src/assets/tec1.png",
+    imagem: "@/assets/tec1.png",
     linkCertificado: "#",
     linkInstituicao: "https://www.uff.br",
   },
