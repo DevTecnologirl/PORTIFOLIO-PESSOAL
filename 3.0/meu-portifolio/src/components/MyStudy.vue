@@ -44,6 +44,8 @@
 <script setup>
 import { ref } from "vue";
 
+import tec1 from "@/assets/tec1.png";
+import tec3 from "@/assets/tec3.png";
 const cursos = ref([
   {
     tipo: "Técnico",
@@ -52,7 +54,7 @@ const cursos = ref([
     descricao:
       "Formação técnica voltada para desenvolvimento de sistemas, redes e manutenção de computadores.",
     habilidades: ["HTML", "CSS", "JavaScript", "Redes", "Hardware", "Manutenção de Computadores", "Banco de Dados", "Lógica de Programação", " Sistemas Embarcados"],
-    imagem: "@/assets/tec3.png",
+    imagem: tec3,
     linkCertificado: "#",
     linkInstituicao: "https://www.iff.edu.br",
   },
@@ -63,7 +65,7 @@ const cursos = ref([
     descricao:
       "Graduação com foco em engenharia de software, banco de dados, programação e gestão de tecnologia.",
     habilidades: ["Java", "Python", "Banco de Dados", "Engenharia de Software", "Estrutura de Dados", "Algoritmos", "Desenvolvimento Web", "Redes de Computadores"],
-    imagem: "@/assets/tec1.png",
+    imagem: tec1,
     linkCertificado: "#",
     linkInstituicao: "https://www.uff.br",
   },
