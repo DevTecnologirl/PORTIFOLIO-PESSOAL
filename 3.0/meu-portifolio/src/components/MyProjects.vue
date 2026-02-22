@@ -1,15 +1,17 @@
 <template>
   <section class="projects-section">
     <h2 class="section-title"><span class="numero">04.</span>  Outros projetos notáveis</h2>
-    <p class="section-subtitle">ver o arquivo</p>
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <a class="section-subtitle" href="https://github.com/DevTecnologirl"></a>
+    </div>
 
     <div class="grid-container">
       <div v-for="project in projects" :key="project.title" class="card">
         <div class="card-header">
-          <i class="icon-folder">📁</i>
+          <i class="icon-folder"><img src="../assets/folder.png" class="icon-white"></img></i>
           <div class="card-icons">
-            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer">🐙</a>
-            <a v-if="project.external" :href="project.external" target="_blank" rel="noopener noreferrer">🔗</a>
+            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"><img src="../assets/github.png" width="26px" class="icon-white"></img></a>
+            <a v-if="project.external" :href="project.external" target="_blank" rel="noopener noreferrer"></a>
           </div>
         </div>
         <h3 class="project-title">{{ project.title }}</h3>
@@ -33,51 +35,54 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Integrating Algolia Search with WordPress Multisite',
-    description: 'Building a custom multisite compatible WordPress plugin to build global search with Algolia',
-    techs: ['Algolia', 'WordPress', 'PHP'],
-    github: '#',
+    title: 'CARRO-SEGUIDOR-DE-LINHA',
+    description: 'Código realizado para a feira semana saber fazer saber no IFF campus campos centro, onde tive que elaborar um código em arduino para a placa do arduino que controlava dois servo-motores além dos sensores de refletância.',
+    techs: ['shields', 'modulos', 'robótica', 'linguagem C'],
+    github: 'https://github.com/DevTecnologirl/CARRO-SEGUIDOR-DE-LINHA/blob/main/SEGUIDOR%20DE%20LINHA',
     external: '#'
   },
   {
-    title: 'Time to Have More Fun',
-    description: 'A single page web app for helping me choose where to travel, built with Next.js, Firebase, and Tailwind CSS',
-    techs: ['Next.js', 'Tailwind CSS', 'Firebase'],
-    github: '#',
+    title: 'Bootcamp Santander Code Girls 2025',
+    description: 'Aqui você vai acompanhar minha jornada no Bootcamp Santander Cibersegurança 2025, realizado pela DIO em parceria com o Santander Universidades.',
+    techs: ['C#', 'Python', 'JS', 'Kotlin', 'Cibersecurity'],
+    github: 'https://github.com/DevTecnologirl/code-girls-bootcamp-2025/tree/ciberseguranca-2025',
     external: '#'
   },
   {
-    title: 'Building a Headless Mobile App CMS From Scratch',
-    description: 'Custom headless CMS with Node, Express, and Firebase',
-    techs: ['Node', 'Express', 'Firebase', 'Vue'],
-    github: '#',
+    title: 'Agente_AI',
+    description: 'Criando um agente AI personalizado para o salão elshaday',
+    techs: ['Python', 'modulos', 'AI', 'Gemini'],
+    github: 'https://github.com/DevTecnologirl/Agente_AI',
     external: '#'
   },
   {
-    title: 'OctoProfile',
-    description: 'A nicer look at your GitHub profile and repo stats',
-    techs: ['Vue', 'Tailwind CSS'],
-    github: '#',
+    title: 'PROG_USP_PYTHON',
+    description: 'Um projeto da USP - Meninas Programadoras USP',
+    techs: ['Python', 'VSCODE'],
+    github: 'https://github.com/DevTecnologirl/PROG_USP_PYTHON',
     external: '#'
   },
   {
-    title: 'Google Keep Clone',
-    description: 'A simple Google Keep clone built with Vue and Firebase.',
-    techs: ['Vue', 'Firebase'],
-    github: '#',
+    title: 'Missile_Escape',
+    description: 'Projeto de jogo realizado na Unity.',
+    techs: ['C#', 'Jogo'],
+    github: 'https://github.com/DevTecnologirl/Missile_Escape',
     external: '#'
   },
   {
-    title: 'Apple Music Embeddable Web Player Widget',
-    description: 'Widget para player web Apple Music que permite ouvir, buscar e navegar.',
-    techs: ['Apple Music API', 'JavaScript'],
-    github: '#',
+    title: 'Quiz_BitDogLab_Project',
+    description: 'Este projeto explora o uso da comunicação serial (UART e I2C) e o controle de LEDs na placa BitDogLab (RP2040). Ele permite operar uma matriz 5x5 de LEDs WS2812, exibir informações em um display OLED SSD1306 e interagir com botões físicos utilizando interrupções.',
+    techs: ['Robótica', 'BitDogLab', 'C', 'CMake'],
+    github: 'https://github.com/DevTecnologirl/Quiz_BitDogLab_Project',
     external: '#'
   }
 ]
 </script>
 
 <style scoped>
+.icon-white {
+  filter: invert(100%) brightness(200%);
+}
 .numero {
   color: #baff75;
   font-family: monospace;
@@ -101,7 +106,7 @@ const projects: Project[] = [
 .section-subtitle {
   text-align: center;
   color: #baff75;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 1rem;
   cursor: pointer;
 }

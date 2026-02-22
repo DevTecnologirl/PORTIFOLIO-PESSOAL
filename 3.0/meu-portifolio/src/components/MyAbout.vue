@@ -7,7 +7,7 @@
           <h2 class="titulo">Sobre Mim</h2>
         </div>
         <p>
-          Olá! Meu nome é <strong>Camilly Duarte</strong> e sou <strong>Desenvolvedora Fullstack</strong> apaixonada por criar soluções digitais modernas e funcionais.
+          Olá! Aqui é a <strong>@Tecnologirl</strong> e também sou <strong>Camilly Duarte</strong> uma <strong>Desenvolvedora Fullstack</strong> apaixonada por criar soluções digitais modernas e funcionais.
           Minha jornada no desenvolvimento começou no ensino médio técnico pelo IFF onde tive oportunidade também em ser bolsista de um laboratório Maker.
         </p>
         <p>
@@ -71,11 +71,12 @@
   font-family: 'Fira Code', monospace;
   font-size: 1.5rem;
   font-weight: 700;
+  margin-top: 20px;
 }
 
 .titulo {
   color: #f7f6f6;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   font-family: 'Inter', sans-serif;

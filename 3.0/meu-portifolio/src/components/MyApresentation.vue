@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 2rem;
+  padding: 18rem 2rem;
 }
 
 .texto {
@@ -53,7 +53,7 @@
 }
 
 .descricao {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #f7f6f6;
   line-height: 1.6;
   max-width: 900px;

@@ -60,7 +60,7 @@ const jobs = ref<Job[]>([
   },
   {
     company: 'Instrutora',
-    title: 'Ctrl+Play - Instrutora de programação e robótica',
+    title: 'Ctrl+Play - Instrutora de Programação e Robótica',
     date: 'Mar 2023 – Abr 2024',
     points: [
       'Peparar e ministrar aulas de programação: Godot, Roblox, Unity, , Scratch, Kodu.',
@@ -72,7 +72,7 @@ const jobs = ref<Job[]>([
   },
   {
     company: 'Analista de Sistemas',
-    title: 'Minsait - Analista de Sistemas',
+    title: 'Minsait - Suporte de Service-Desk',
     date: 'Set 2023 – Mai 2024',
     points: [
       ' Suporte a impressoras. Atendimento à aplicações e ferramentas dentro do serviço.',
@@ -98,9 +98,9 @@ const activeIndex = ref(0)
 
 <style scoped>
 .experience-section {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 9rem 1rem;
   color: #baff75;
 }
 
@@ -124,7 +124,7 @@ h2 {
 .section-line {
   flex-grow: 1;
   height: 1px;
-  background: #9bfa01c9;
+  background: #9a01fa98;
   margin-left: 1rem;
 }
 
@@ -187,6 +187,7 @@ h2 {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 1rem;
 }
 
 .description li {

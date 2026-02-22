@@ -19,7 +19,7 @@
 
     <!-- Email + separator lado a lado em coluna reversa -->
     <div class="socials-right">
-        <a href="mailto:tecnologirlinformatica@gmail.com" class="email">tecnologirlinformatica@gmail.com</a>
+        <a href="mailto:contato.tecnologirl@gmail.com" class="email">contato.tecnologirl@gmail.com</a>
         <q-separator vertical class="vertical-separator" />
     </div>
   </div>

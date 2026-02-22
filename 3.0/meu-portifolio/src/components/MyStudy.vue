@@ -13,7 +13,9 @@
     >
       <!-- Imagem / Ilustração -->
       <div class="card-image">
-        <img :src="curso.imagem" :alt="curso.titulo" />
+        <div class="foto-wrapper">
+          <img :src="curso.imagem" :alt="curso.titulo" />
+        </div>
       </div>
 
       <!-- Detalhes -->
@@ -31,7 +33,7 @@
         </div>
 
         <ul class="skills-list">
-          <li v-for="skill in curso.habilidades" :key="skill">{{ skill }}</li>
+          <a v-for="skill in curso.habilidades" :key="skill">{{ skill }}</a>
         </ul>
 
       </div>
@@ -141,8 +143,52 @@ const cursos = ref([
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+
 }
 
+.foto-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.foto-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #baff75;
+  border-radius: 4px;
+  z-index: -1;
+  transition: top 0.4s ease, left 0.4s ease;
+}
+
+.foto-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(186, 255, 117, 0.4);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -2;
+}
+
+.foto-wrapper:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.foto-wrapper:hover::before {
+  top: 10px;
+  left: 10px;
+}
+
+.foto-wrapper:hover::after {
+  opacity: 1;
+}
 .card-content {
   flex: 1;
 }
@@ -168,6 +214,7 @@ const cursos = ref([
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .skills-list {
@@ -179,8 +226,8 @@ const cursos = ref([
   margin-bottom: 1rem;
 }
 
-.skills-list li {
-  background: rgba(255, 255, 255, 0.103);
+.skills-list a {
+  background-color: #43335515;
   padding: 0.3rem 0.7rem;
   border-radius: 3px;
 }
