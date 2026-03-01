@@ -175,4 +175,39 @@ const projects: Project[] = [
   font-size: 0.8rem;
   color: #c4a7fe;
 }
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .numero {
+    font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+
+  .tech-list {
+    font-size: 0.75rem;
+  }
+}
 </style>

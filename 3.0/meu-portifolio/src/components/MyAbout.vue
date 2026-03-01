@@ -170,4 +170,46 @@
 .foto-wrapper:hover::after {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .sobre-container {
+    padding: 4rem 1rem;
+  }
+
+  .conteudo {
+    gap: 2rem;
+  }
+
+  .texto {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .numero {
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+
+  .texto p {
+    font-size: 0.95rem;
+  }
+
+  .tecnologias {
+    grid-template-columns: 1fr;
+  }
+
+  .foto {
+    flex: 1 1 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .foto img {
+    width: 250px;
+  }
+}
 </style>

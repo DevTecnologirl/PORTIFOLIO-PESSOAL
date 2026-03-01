@@ -59,4 +59,26 @@
   max-width: 900px;
   font-family: 'Inter', sans-serif;
 }
+
+@media (max-width: 768px) {
+  .sobre-container {
+    padding: 6rem 1rem;
+  }
+
+  .nome {
+    font-size: 2.5rem;
+  }
+
+  .frase {
+    font-size: 1.5rem;
+  }
+
+  .saudacao {
+    font-size: 1rem;
+  }
+
+  .descricao {
+    font-size: 1rem;
+  }
+}
 </style>

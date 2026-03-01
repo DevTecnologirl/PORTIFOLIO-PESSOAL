@@ -98,5 +98,11 @@ import { QSeparator } from 'quasar'
   opacity: 1;
   margin: 0 10px;
 }
+
+@media (max-width: 768px) {
+  .socials-wrapper {
+    display: none;
+  }
+}
 </style>
 

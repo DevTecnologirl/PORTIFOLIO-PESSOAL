@@ -234,5 +234,48 @@ const cursos = ref([
   border-radius: 3px;
 }
 
+@media (max-width: 768px) {
+  .formacao-section {
+    padding: 4rem 1rem;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+
+  .numero {
+    font-size: 1.2rem;
+  }
+
+  .formacao-card,
+  .formacao-card.reverse {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .skills-list {
+    gap: 0.5rem;
+  }
+
+  .skills-list a {
+    font-size: 0.8rem;
+  }
+}
 
 </style>

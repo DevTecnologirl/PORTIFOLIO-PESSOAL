@@ -64,4 +64,26 @@
   background-color: #baff75;
   color: #0f172a;
 }
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1rem;
+  }
+
+  .section-index {
+    font-size: 1.2rem;
+  }
+
+  .numero {
+    font-size: 1.2rem;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+}
 </style>

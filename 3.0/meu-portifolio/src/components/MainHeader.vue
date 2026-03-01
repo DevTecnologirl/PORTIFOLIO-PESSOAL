@@ -1,5 +1,6 @@
 
 <script setup>
+import { ref } from 'vue'
 import { useNavigationStore } from '@/stores/navigation';
 import { useSplashStore } from '@/stores/splash';
 import { useQuasar } from 'quasar'
@@ -7,6 +8,12 @@ import { useQuasar } from 'quasar'
 const splashStore = useSplashStore()
 const navStore = useNavigationStore()
 const $q = useQuasar()
+
+const leftDrawerOpen = ref(false)
+
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value
+}
 
 function restartSplash() {
   splashStore.showSplash = true;
@@ -21,6 +28,7 @@ function openCV() {
   window.open( '/cvcamilly.pdf', '_blank')
 }
 function scrollTo(sectionId) {
+  leftDrawerOpen.value = false
   const el = document.getElementById(sectionId)
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' })
@@ -30,9 +38,19 @@ function scrollTo(sectionId) {
 
 <template>
   <header>
+    <q-btn
+      flat
+      dense
+      round
+      icon="menu"
+      aria-label="Menu"
+      class="menu-toggle"
+      @click="toggleLeftDrawer"
+    />
+
     <img src="@/assets/girl.svg" alt="Logo" class="logo" @click="restartSplash" />
 
-    <nav class="q-gutter-md nav-links">
+    <nav class="q-gutter-md nav-links desktop-only">
   <ul>
     <li><a href="#" @click="scrollTo('about')"><span class="nav-index">01.</span> Sobre</a></li>
     <li><a href="#" @click="scrollTo('experience')"><span class="nav-index">02.</span> Experiência</a></li>
@@ -43,12 +61,55 @@ function scrollTo(sectionId) {
 </nav>
 <div class="button-container">
   <q-btn dense flat round color="white" class="button-cv " icon="description" @click="openCV"/>
-  <!-- <q-btn dense flat round icon="dark_mode" @click="toggleDarkMode" color="white" class="theme-toggle" /> -->
 </div>
+
+    <q-drawer
+      v-model="leftDrawerOpen"
+      side="left"
+      overlay
+      behavior="mobile"
+      class="mobile-menu"
+    >
+      <q-list class="mobile-menu">
+        <q-item-label header class="menu-header">
+          <q-btn flat round dense icon="close" @click="toggleLeftDrawer" color="white" />
+        </q-item-label>
+        
+        <q-item clickable @click="scrollTo('about')">
+          <q-item-section><span class="nav-index">01.</span> Sobre</q-item-section>
+        </q-item>
+        <q-item clickable @click="scrollTo('experience')">
+          <q-item-section><span class="nav-index">02.</span> Experiência</q-item-section>
+        </q-item>
+        <q-item clickable @click="scrollTo('study')">
+          <q-item-section><span class="nav-index">03.</span> Formação</q-item-section>
+        </q-item>
+        <q-item clickable @click="scrollTo('projects')">
+          <q-item-section><span class="nav-index">04.</span> Projetos</q-item-section>
+        </q-item>
+        <q-item clickable @click="scrollTo('contact')">
+          <q-item-section><span class="nav-index">05.</span> Contato</q-item-section>
+        </q-item>
+        
+        <q-item>
+          <q-btn dense flat round color="white" class="button-cv" icon="description" @click="openCV" label="" />
+        </q-item>
+      </q-list>
+    </q-drawer>
   </header>
 </template>
 
 <style scoped>
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.desktop-only {
+  display: flex;
+}
 
 .button-cv {
   display: flex;
@@ -170,4 +231,50 @@ header {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(99, 49, 207, 0.4);
 }
-</style> 
+
+.mobile-menu {
+  background-color: #200044;
+  padding: 1rem;
+}
+
+.mobile-menu .q-item {
+  color: #fafafa;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-menu .nav-index {
+  color: #baff75;
+  margin-right: 0.5rem;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    margin-left: 0.5rem;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  header {
+    padding: 1rem;
+    height: 70px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 80px;
+  }
+
+  .button-container {
+    margin-right: 0;
+  }
+}
+</style>

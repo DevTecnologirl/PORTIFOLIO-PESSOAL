@@ -205,4 +205,54 @@ h2 {
   color: #baff75;
   font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 4rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-index {
+    font-size: 1.2rem;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .company-list {
+    border-left: none;
+    border-bottom: 2px solid #3a0185d7;
+    min-width: auto;
+  }
+
+  .company-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .company-list li {
+    padding: 0.5rem 1rem;
+    border-left: 2px solid transparent;
+    border-bottom: none;
+  }
+
+  .company-list li.active {
+    border-left-color: #baff75;
+    border-bottom: none;
+  }
+
+  .job-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .description li {
+    font-size: 0.9rem;
+  }
+}
 </style>
